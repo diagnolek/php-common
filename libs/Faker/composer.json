@@ -1,0 +1,7 @@
+{
+  "name": "lib/Faker",
+  "description": "value generator by language",
+  "require-dev": {
+    "fakerphp/faker": "^1.23"
+  }
+}

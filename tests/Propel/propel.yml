@@ -1,0 +1,22 @@
+propel:
+    general:
+        project: php-lib-common
+        version: 1.0
+    paths:
+        projectDir: "%env.projectDir%"
+        phpConfDir: "%env.projectDir%/config"
+        phpDir: "%env.projectDir%/src"
+        migrationDir: "%env.projectDir%/migration"
+        schemaDir: "%env.projectDir%/schema"
+        outputDir: "%env.projectDir%/reverse"
+        sqlDir: "%env.projectDir%/sql"
+    exclude_tables: []
+    database:
+        connections:
+            example:
+                adapter: sqlite
+                dsn: "sqlite:%env.projectDir%/example.db"
+                user:
+                password:
+                settings:
+                    charset: utf-8

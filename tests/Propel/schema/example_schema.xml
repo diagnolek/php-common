@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<database name="example" defaultIdMethod="native" defaultPhpNamingMethod="underscore" namespace="Db\Example">
+    <table name="resource" idMethod="native" phpName="Resource">
+        <column name="uid" phpName="Uid" type="VARCHAR" primaryKey="true" required="true"/>
+        <column name="name" phpName="Name" type="VARCHAR"/>
+    </table>
+    <table name="reservation" idMethod="native" phpName="Reservation">
+        <column name="id" phpName="Id" type="INTEGER" primaryKey="true" autoIncrement="true" required="true"/>
+        <column name="resource_uid" phpName="Uid" type="VARCHAR" required="true"/>
+        <column name="date_from" phpName="DateFrom" type="TIMESTAMP" required="true"/>
+        <column name="date_to" phpName="DateTo" type="TIMESTAMP" required="true"/>
+        <foreign-key foreignTable="resource" name="reservation_resource_uid_fk">
+            <reference local="resource_uid" foreign="uid"/>
+        </foreign-key>
+    </table>
+</database>
