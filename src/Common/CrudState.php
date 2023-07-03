@@ -17,7 +17,7 @@ class CrudState extends Enum
 
     public array $data = [];
 
-    public static function setState(int $state, array $data = [])
+    public static function setState(int $state, array $data = []): void
     {
         self::$state = self::from($state);
         self::$state->data = $data;
